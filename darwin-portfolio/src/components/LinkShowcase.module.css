@@ -1,0 +1,248 @@
+.showcase {
+  background: var(--bg-secondary);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.title {
+  margin: 1rem 0;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid var(--grey-700);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  border-color: var(--accent);
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Discord Card */
+.discordCard {
+  grid-column: span 2;
+}
+
+.discordHeader {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+
+.discordAvatar {
+  position: relative;
+}
+
+.statusRing {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  background: var(--racing-green);
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+}
+
+.discordInfo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.discordTag {
+  color: var(--text-tertiary);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(0, 212, 72, 0.1);
+  border-radius: 12px;
+  font-size: 0.875rem;
+  color: var(--racing-green);
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: var(--racing-green);
+  border-radius: 50%;
+}
+
+.discordBio {
+  margin-bottom: 1.5rem;
+}
+
+.discordBio p {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.connectBtn {
+  width: 100%;
+  padding: 0.875rem;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.connectBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(45, 168, 255, 0.3);
+}
+
+/* Music Card */
+.musicContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.musicInfo {
+  margin-bottom: 1rem;
+}
+
+.songTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.artist {
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+.waveform {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 60px;
+}
+
+/* GitHub Calendar */
+.githubCard {
+  grid-column: span 2;
+}
+
+.calendarGrid {
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.calendarWeek {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.githubStats {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* Hackatime Gauge */
+.gauge {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  display: block;
+}
+
+.gaugeValue {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--accent);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.gaugeUnit {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  margin-left: 0.5rem;
+}
+
+/* Quick Links */
+.quickLink {
+  cursor: pointer;
+  text-align: center;
+}
+
+.linkIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.linkTitle {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.linkDesc {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .discordCard,
+  .githubCard {
+    grid-column: span 1;
+  }
+  
+  .discordHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+}

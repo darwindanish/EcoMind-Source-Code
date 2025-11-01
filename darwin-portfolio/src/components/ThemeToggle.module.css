@@ -1,0 +1,64 @@
+.toggle {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  z-index: 999;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.track {
+  width: 60px;
+  height: 30px;
+  background: var(--grey-700);
+  border-radius: 15px;
+  position: relative;
+  transition: background 0.3s ease;
+  border: 2px solid var(--grey-600);
+}
+
+.track.light {
+  background: var(--grey-300);
+  border-color: var(--grey-400);
+}
+
+.thumb {
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background: var(--surface-elevated);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.68, -0.3, 0.32, 1.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.light .thumb {
+  left: calc(100% - 25px);
+}
+
+@media (max-width: 768px) {
+  .toggle {
+    top: 4.5rem;
+    right: 1rem;
+  }
+  
+  .track {
+    width: 50px;
+    height: 26px;
+  }
+  
+  .thumb {
+    width: 20px;
+    height: 20px;
+    font-size: 0.625rem;
+  }
+}
